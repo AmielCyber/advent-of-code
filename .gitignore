@@ -39,3 +39,11 @@
 
 # debug information files
 *.dwo
+
+# Apple Directory meta data
+.DS_Store
+
+# Idea Bloat
+*.idea
+
+
