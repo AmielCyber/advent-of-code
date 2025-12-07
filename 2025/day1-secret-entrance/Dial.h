@@ -14,5 +14,6 @@ private:
   int num_of_points = 100;
   int normalize(int amount) const;
   void update_zero_point_count();
+  void update_zero_count_part2(int amount, int point_sum, int new_point);
 };
 #endif //DAY1_SECRET_ENTRANCE_DIAL_H

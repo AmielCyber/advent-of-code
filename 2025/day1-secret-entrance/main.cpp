@@ -6,17 +6,17 @@ void parse_rotations(std::ifstream& file, Dial& dial) {
   std::string line;
   int rotations = 0;
   while (std::getline(file, line)) {
-    const char rotation = line[0];
+    const char orientation = line[0];
     try {
       rotations = std::stoi(line.substr(1));
     }catch (std::invalid_argument& e) {
       std::cout << e.what() << '\n';
       std::cout << "Invalid input: \"" << line << '\"' << '\n';
     }
-    if (rotation == 'R') {
+    if (orientation == 'R') {
       dial.right_rotation(rotations);
     }
-    if (rotation == 'L') {
+    if (orientation == 'L') {
       dial.left_rotation(rotations);
     }
   }
