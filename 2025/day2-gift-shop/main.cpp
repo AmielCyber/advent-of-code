@@ -40,6 +40,7 @@ int main() {
   InvalidIdCollector invalid_id_collector;
   parse_ids("./input.txt", invalid_id_collector);
 
-  std::vector<long long> result = invalid_id_collector.get_invalid_ids();
+  std::vector<long> result = invalid_id_collector.get_invalid_ids();
+  // SUM ALL Invalid IDs.The answer will be a large number,so the answer is a long long, hence the 0LL
   std::cout << std::accumulate(result.begin(), result.end(), 0LL) << std::endl;
 }
