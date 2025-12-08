@@ -11,11 +11,11 @@ class InvalidIdCollector {
 public:
   InvalidIdCollector() = default;
   void add_invalid_ids(long low, long high);
-  std::vector<long long> get_invalid_ids();
+  std::vector<long> get_invalid_ids();
 private:
-  std::vector<long long> invalidIds;
-
+  std::vector<long> invalidIds;
   static bool is_symmetric(long num);
+  static bool is_symmetric_part2(long num);
 };
 
 
