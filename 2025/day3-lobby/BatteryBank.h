@@ -9,9 +9,11 @@
 class BatteryBank {
   public:
   void add_optimal_batteries(const std::string& bank);
-  std::vector<int> get_optimal_batteries();
+  void add_optimal_batteries_part2(const std::string& bank, int k = 2);
+  std::vector<long> get_optimal_batteries();
   private:
-  std::vector<int> battery_jolts;
+  std::vector<long> battery_jolts;
+  void add_char_vector_jolts_to_battery_vector_jolts(const std::vector<char>& battery);
 };
 
 
