@@ -6,8 +6,10 @@ class ForkliftGrid {
 public:
   explicit ForkliftGrid(std::vector<std::vector<char>> grid);
   long get_rolls_of_paper_to_move() const;
+  long get_rolls_of_paper_to_move_part_2() ;
 private:
   const char PAPER = '@';
+  const char EMPTY = '.';
   const int MAX_ADJ_PAPER = 3;
   std::vector<std::vector<char>> grid;
   bool is_within_bounds(int row, int col) const;

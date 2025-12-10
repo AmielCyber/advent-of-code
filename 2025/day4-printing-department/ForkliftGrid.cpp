@@ -17,6 +17,24 @@ long ForkliftGrid::get_rolls_of_paper_to_move() const {
   return rolls_of_paper;
 }
 
+long ForkliftGrid::get_rolls_of_paper_to_move_part_2() {
+  long rolls_of_paper = 0;
+  bool did_cleanup = true;
+  while (did_cleanup) {
+    did_cleanup = false;
+    for (int i = 0; i < grid.size(); i++) {
+      for (int j = 0; j < grid[0].size(); j++) {
+        if (grid[i][j] == PAPER && is_accessible(i, j)) {
+          ++rolls_of_paper;
+          grid[i][j] = EMPTY;
+          did_cleanup = true;
+        }
+      }
+    }
+  }
+  return rolls_of_paper;
+}
+
 bool ForkliftGrid::is_within_bounds(const int row, const int col) const {
   return row > -1 && row < grid.size() && col > -1 && col < grid[row].size();
 }

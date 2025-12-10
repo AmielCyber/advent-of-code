@@ -28,7 +28,11 @@ std::vector<std::vector<char>> parse_grid_input(const std::string& file_name) {
 
 int main() {
   std::vector<std::vector<char>> grid = parse_grid_input("input.txt");
-  const ForkliftGrid foklift(grid);
-  std::cout << "Rolls of paper: " << foklift.get_rolls_of_paper_to_move() << std::endl;
+  // Part 1
+  // const ForkliftGrid foklift(grid);
+  // std::cout << "Rolls of paper: " << foklift.get_rolls_of_paper_to_move() << std::endl;
+  // Part 2
+  ForkliftGrid foklift(grid);
+  std::cout << "Rolls of paper: " << foklift.get_rolls_of_paper_to_move_part_2() << std::endl;
   return 0;
 }
