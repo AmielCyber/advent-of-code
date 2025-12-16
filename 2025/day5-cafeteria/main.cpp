@@ -26,15 +26,19 @@ std::pair<std::vector<std::pair<long,long>>, std::vector<long>> get_input(const 
 
 int main() {
   auto[my_ranges, ids] = get_input("input.txt");
-  const FreshIngredientIds fresh_ingredient_ids{my_ranges};
+  FreshIngredientIds fresh_ingredient_ids{my_ranges};
+  fresh_ingredient_ids.merge_ranges();
 
+  /** Part 1
   long fresh_ingredients{0};
   for (const auto &id: ids) {
     if (fresh_ingredient_ids.has(id)) {
       ++fresh_ingredients;
     }
   }
-
   std::cout << "Total Fresh Ingredients: "<< fresh_ingredients << std::endl;
+  */
+
+  std::cout << "Total Fresh Ingredients: "<< fresh_ingredient_ids.size() << std::endl;
   return 0;
 }
