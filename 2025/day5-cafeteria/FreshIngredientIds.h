@@ -8,6 +8,8 @@ class FreshIngredientIds {
   explicit FreshIngredientIds(const std::vector<std::pair<long, long>>& id_ranges);
   [[nodiscard]] std::vector<std::pair<long, long>> get_id_ranges() const;
   [[nodiscard]] bool has(long id) const;
+  void merge_ranges();
+  [[nodiscard]] long size() const;
 private:
   std::vector<std::pair<long,long>> ingredient_id_range;
 };
