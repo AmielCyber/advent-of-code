@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(day6_trash_compactor main.cpp
         CephalopodCalculator.cpp
-        CephalopodCalculator.h)
+        CephalopodCalculator.h
+        CephalopodCalculator2.cpp
+        CephalopodCalculator2.h)
