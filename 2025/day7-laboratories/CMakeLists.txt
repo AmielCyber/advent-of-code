@@ -4,5 +4,7 @@ project(day7_laboratories)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(day7_laboratories main.cpp
+        QuantumTachyonManifold.cpp
+        QuantumTachyonManifold.h
         TachyonManifold.cpp
         TachyonManifold.h)
